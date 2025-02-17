@@ -14,20 +14,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/customers")
-@Tag(name = "Customer API", description = "Customer management API")
+@Tag(name = "Customer API", description = "Customer onboarding API")
 @RequiredArgsConstructor
 public class CustomerController {
     private final CustomerService service;
 
     @PostMapping
-    @Operation(summary = "Create a new customer")
+    @Operation(summary = "Onboard new customer")
     public ResponseEntity<CustomerDTO> createCustomer(@Valid @RequestBody CustomerDTO customerDTO) {
         return new ResponseEntity<>(service.createCustomer(customerDTO), HttpStatus.CREATED);
     }
 
-    @GetMapping
-    @Operation(summary = "Get all customers")
-    public ResponseEntity<List<CustomerDTO>> getAllCustomers() {
-        return ResponseEntity.ok(service.getAllCustomers());
-    }
 }

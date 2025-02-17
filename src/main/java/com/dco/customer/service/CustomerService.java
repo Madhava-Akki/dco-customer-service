@@ -24,7 +24,4 @@ public class CustomerService {
         return mapper.toDTO(savedCustomer);
     }
 
-    public List<CustomerDTO> getAllCustomers() {
-        return repository.findAll().stream().map(mapper::toDTO).collect(Collectors.toList());
-    }
 }

@@ -1,4 +1,4 @@
-package com.dco.customer.exceptions;
+package com.dco.customer.mapper;
 
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.validation.FieldError;

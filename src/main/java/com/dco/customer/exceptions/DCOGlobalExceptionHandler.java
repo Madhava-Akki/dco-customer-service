@@ -1,5 +1,6 @@
 package com.dco.customer.exceptions;
 
+import com.dco.customer.mapper.ErrorResponseMapper;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
